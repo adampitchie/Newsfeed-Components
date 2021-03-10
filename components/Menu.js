@@ -36,13 +36,15 @@ function menuMaker(menuArray) {
   const menu = document.createElement('div');
   const unorderedList = document.createElement('ul');
 
-  menu.classList.add('menu');
+  menu.appendChild(unorderedList);
 
   menuArray.forEach(item => {
     const li = document.createElement('li')
     li.textContent = item
     unorderedList.appendChild(li);
   });
+
+  menu.classList.add('menu');
 
   const menuButton = document.querySelector('.menu-button')
 
